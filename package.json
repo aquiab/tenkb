@@ -1,0 +1,27 @@
+{
+  "name": "tenkb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "aws-sdk": "^2.596.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "node-sass": "^4.13.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass -w sass -o public/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aquiab/tenkb.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aquiab/tenkb/issues"
+  },
+  "homepage": "https://github.com/aquiab/tenkb#readme"
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="../public/css/main.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
+    <h1>10kb</h1>
+  </header>
+  <main>
+    <input type="file" id="file-input">
+    <p id="status">Please select a file</p>
+    <form method="POST" action="/save-details">
+      <input type="submit" value="Upload">
+    </form>
+
+    <div id='gallery'>
+    </div>
+  </main>
+  <footer>
+
+  </footer>
+  <script src='../public/scripts/uploads.js'></script>
+  <script src='../public/scripts/main.js'></script>
+</body>
+
+</html>
