@@ -1,15 +1,15 @@
-export function uploadFile(file, signedRequest, url){
-  const xhr = new XMLHttpRequest();
-  xhr.open('PUT', signedRequest);
+export function uploadFile(file, signedRequest){
+  const xhr = new XMLHttpRequest()
+  xhr.open('PUT', signedRequest)
   xhr.onreadystatechange = () => {
     if(xhr.readyState === 4){
       if(xhr.status === 200){
-        uploads.push(url)
+        location.reload()
       }
       else{
-        alert('Could not upload file.');
+        alert('Could not upload file.')
       }
     }
-  };
-  xhr.send(file);
+  }
+  xhr.send(file)
 }
