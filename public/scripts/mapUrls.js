@@ -1,6 +1,6 @@
 async function getUrls() {
   try {
-    let resp = await fetch('http://localhost:5000/get-urls')
+    let resp = await fetch('/get-urls')
     let data = await resp.json()
     return data
   }
