@@ -1,28 +1,69 @@
 *
   margin: 0
   font-family: 'Inconsolata', monospace
-  font-size: 1.2vmax
+  font-size: 1.4vmax
+  @media only screen and (max-device-width: 768px)
+    font-size: 2vmax
 
 header > h1
-  font-size: 4em
+  font-size: 4rem
 
 body
   background-color: white
 
 #main-container
+  margin-left: 5%
+  margin-right: 5%
+
+.flex-parent
   display: flex
   flex-direction: column
 
 .flex-child
   align-self: center
-  margin-bottom: 1em
+  margin-bottom: 1rem
+
+#upload-button
+  border: 1px solid black
+  padding: 0.8rem
+  text-decoration: underline
 
 #gallery
   border: 1px solid black
   border-radius: 2px
+  display: flex
+  flex-wrap: wrap
   .tile
-    height: 10em
-    width: 10em
+    flex-grow: 1
+    border: 1px solid black
+    margin: 2px
+    width: 11rem
+    height: 11rem
+    cursor: pointer
     background-position: center center
     background-repeat: no-repeat
     background-size: cover
+
+#popup
+  border: 1px solid black
+  display: none
+  position: fixed
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  z-index: 99
+  background-color: white
+  #popup-header
+    height: 1rem
+    #popup-close
+      cursor: pointer
+      float: right
+      color: blue
+      text-decoration: underline
+      margin: 0 0.1rem 0.1rem 0
+  #popup-img
+    display: block
+    width: 25rem
+    max-width: 1000px
+    max-height: 30rem
+    

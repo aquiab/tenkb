@@ -26,7 +26,7 @@ app.get('/get-urls', function (req, res) {
       /* get urls */
       let urlArray = []
       for(let i = 0; i < data.Contents.length; i++){
-        urlArray.push(data.Contents[i].Key)
+        urlArray.push('https://tenkb.s3-sa-east-1.amazonaws.com/' + data.Contents[i].Key)
       }
       res.send(urlArray)
     }

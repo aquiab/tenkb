@@ -1,13 +1,10 @@
 import { getSignedRequest } from './getSignedRequest.js'
 
 (() => {
-  document.getElementById("upload-button").onclick = () => {
-    const files = document.getElementById('file-input').files
-    const file = files[0]
+  document.getElementById("file-input").onchange = () => {
     if (window.FileReader && window.Blob) {
-      if (file == null) {
-        return alert('No file selected.')
-      }
+      const files = document.getElementById('file-input').files
+      const file = files[0]
       if (file.size >= 10000) {
         return alert("File is too big: " + file.size + " bytes, should be under 10000.")
       }

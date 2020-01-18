@@ -1,6 +1,2 @@
 ver si se puede elimnar el warning de xml en firefox
-aplicar la galeria para q se vea bonito, ver como hacer con los archivos de audio y las imagenes
-agregar funcionamiento para que con un click el archivo (imagen, audio, video) se abra en "pantalla completa"
-hacer todo el diseño para q no sea un asco
-pensar un nuevo nombre?
 agregar una descripcion q explique q es el sitio
