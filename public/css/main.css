@@ -9,8 +9,8 @@ header > h1 {
   font-size: 4rem; }
 
 #main-container {
-  margin-left: 5%;
-  margin-right: 5%; }
+  margin-left: 7.5%;
+  margin-right: 7.5%; }
 
 .flex-parent {
   display: flex; }
@@ -86,7 +86,8 @@ header > h1 {
     #popup #popup-content #popup-txt {
       max-height: 80vh;
       width: 75vw;
-      line-height: 1.8rem; }
+      line-height: 1.8rem;
+      overflow: scroll; }
 
 @media only screen and (max-device-width: 768px) {
   * {
@@ -94,9 +95,9 @@ header > h1 {
   #upload-button {
     font-size: 1.7rem; }
   .footer-item {
-    font-size: 1.4rem; }
+    font-size: 1.7rem; }
   #popup-txt * {
-    font-size: 1.4rem; } }
+    font-size: 1.7rem; } }
 
 @media only screen and (min-device-width: 520px) and (max-device-width: 1400px) and (orientation: landscape) {
   * {
