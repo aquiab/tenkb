@@ -13,7 +13,7 @@ async function mapUrls() {
   let urls = await getUrls()
   let gallery = document.getElementById('gallery')
   for (let i = 0; i < urls.length; i++) {
-    gallery.innerHTML += '<div class="tile" onclick="openBox(\'' + urls[i] + '\')" style="background-image: url(\'' + urls[i] + '\')"></div>'
+    gallery.innerHTML += '<div class="tile" onclick="handlePopups(\'' + urls[i] + '\')" style="background-image: url(\'' + urls[i] + '\')"></div>'
   }
 }
 

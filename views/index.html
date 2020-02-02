@@ -11,34 +11,69 @@
 </head>
 
 <body>
-  <div id='main-container' class='flex-parent'>
+  <div id='main-container' class='flex-parent flex-column'>
     <header class='flex-child'>
       <h1>10kb</h1>
     </header>
     <main class='flex-child'>
-      <div class='flex-parent'>
-        <div class='flex-child flex-parent'>
-          <label for="file-input" class="flex-child" id='upload-button'>
+      <div class='flex-parent flex-column'>
+        <div class='flex-child flex-parent flex-column'>
+          <label for="file-input" class="flex-child padding" id='upload-button'>
             Upload Image
           </label>
-          <input type="file" id="file-input" class='flex-child' accept=".jpg,.jpeg,.png,.gif,.ico" style='display: none'>
+          <input type="file" id="file-input" class='flex-child' accept=".jpg,.jpeg,.png,.gif,.ico,.webp"
+            style='display: none'>
         </div>
       </div>
       <div id='gallery'></div>
-      <div id='popup'>
-        <div id='popup-header'>
-          <div id='popup-close'>x</div>
+      <div id='popup' class='closed'>
+        <div id='popup-content'>
+          <img id='popup-img' class='closed' src='' />
+          <div id='popup-txt'>
+            <div id='about-txt' class='closed padding'>
+              <p>this is an image gallery where anyone can upload images that are under 10kbs in size</p>
+              <p>inspired by:
+                <ul>
+                  <li>nostalgia for old internet forums and the internet from the 2000s</li>
+                  <li>the <a href='https://archive.org/details/20kbps' target='_blank'>20kbps music label</a></li>
+                  <li>an interest in how the internet would turn out to be if disk storage became scarcer</li>
+                  <li>the <a href='https://a-k-apart.com/' target='_blank'>10k apart contest</a></li>
+                  <li><a href='https://aesthetics.fandom.com/wiki/Webcore' target='_blank'>webcore</a> and <a
+                      href='https://aesthetics.fandom.com/wiki/Animecore' target='_blank'>animecore</a> visual
+                    aesthetics</li>
+                  <li>the <a href='https://blog.geocities.institute/' target="_blank">one terabyte of kilobyte age
+                      project</a></li>
+                </ul>
+              </p>
+              <br>
+              if your images and gifs are over the size limit, you can compress them here: <a
+                href='https://compressjpeg.com/' target='_blank'>static images</a>,
+              <a href='https://ezgif.com/optimize' target='_blank'>gifs</a>, resizing them to a lower size is also a
+              good idea
+            </div>
+            <div id='options' class='closed padding'>
+              <p>the default algorithm all major browsers use for image scaling will make upscaled pictures appear blurry</p>
+              <br>
+              <p>enable this if you prefer the more pixel-y look (doesnt work on older versions of edge)</p>
+              <br>
+              <label><input type="checkbox" id='render-toggle' autocomplete='off'
+                  onclick='changeRendering()'>nearest-neighbor interpolation</label>
+            </div>
+          </div>
         </div>
-        <img id='popup-img' src='' />
       </div>
     </main>
-    <footer class='flex-child'>
-
+    <footer class='flex-child flex-parent'>
+      <span class='footer-item' onclick="handlePopups(null, 'options')">change rendering</span>
+      <a class='footer-item' href='https://github.com/aquiab/tenkb' target=”_blank”>github</a>
+      <span class='footer-item' id='about' onclick="handlePopups(null, 'about-txt')">about</span>
     </footer>
   </div>
   <script src='./scripts/mapUrls.js'></script>
   <script type='module' src='./scripts/initUpload.js'></script>
-  <script src='./scripts/openBox.js'></script>
+  <script src='./scripts/handlePopups.js'></script>
+  <script src='./scripts/changeRendering.js'></script>
+
 </body>
 
 </html>

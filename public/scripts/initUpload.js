@@ -15,8 +15,8 @@ import { getSignedRequest } from './getSignedRequest.js'
         for (let i = 0; i < arr.length; i++) {
           header += arr[i].toString(16)
         }
-        // checking for img headers (.png, .jpg, .gif, .ico)
-        let signatures = ['47494638', '89504e47', 'ffd8ffe0', 'ffd8ffdb', 'ffd8ffee', 'ffd8ffe1', '00000100']
+        // checking for img headers (.png, .jpg, .gif, .ico, .webp)
+        let signatures = ['47494638', '89504e47', 'ffd8ffe0', 'ffd8ffdb', 'ffd8ffee', 'ffd8ffe1', '00000100', '52494646']
         for (let i = 0; i < signatures.length; i++) {
           if (header === signatures[i]) {
             getSignedRequest(file)

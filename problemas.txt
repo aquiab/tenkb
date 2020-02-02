@@ -1,2 +1,0 @@
-ver si se puede elimnar el warning de xml en firefox
-agregar una descripcion q explique q es el sitio
