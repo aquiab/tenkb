@@ -5,8 +5,8 @@ import { getSignedRequest } from './getSignedRequest.js'
     if (window.FileReader && window.Blob) {
       const files = document.getElementById('file-input').files
       const file = files[0]
-      if (file.size >= 10000) {
-        return alert("File is too big: " + file.size + " bytes, should be under 10000.")
+      if (file.size >= 10240) {
+        return alert("File is too big: " + file.size + " bytes, should be under 10240.")
       }
       let fr = new FileReader()
       fr.onloadend = e => {
