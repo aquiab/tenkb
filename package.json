@@ -7,7 +7,7 @@
     "aws-sdk": "^2.596.0",
     "ejs": "^3.0.1",
     "express": "^4.17.1",
-    "node-sass": "^4.13.0",
+    "node-sass": "^7.0.0",
     "unique-filename": "^1.1.1"
   },
   "devDependencies": {},
